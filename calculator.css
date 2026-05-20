@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e8f0fe;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+  background-color: #1a3a5c;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(26, 58, 92, 0.4);
+  width: 320px;
+}
+
+.display {
+  background-color: #0d253f;
+  color: #ffffff;
+  font-size: 2.4rem;
+  text-align: right;
+  padding: 20px 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  min-height: 72px;
+  word-break: break-all;
+  line-height: 1.2;
+  border: 2px solid #2a5a8c;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 18px;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+  font-weight: 600;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Number buttons — lighter blue */
+.btn-number {
+  background-color: #2a5a8c;
+  color: #ffffff;
+}
+
+.btn-number:hover {
+  background-color: #336fa3;
+}
+
+/* Operator buttons — medium blue */
+.btn-operator {
+  background-color: #1e6fbf;
+  color: #ffffff;
+}
+
+.btn-operator:hover {
+  background-color: #2580d4;
+}
+
+/* Clear button — steel blue accent */
+.btn-clear {
+  background-color: #3d8bd4;
+  color: #ffffff;
+}
+
+.btn-clear:hover {
+  background-color: #509ae0;
+}
+
+/* Equals button — bright blue accent spanning two rows */
+.btn-equals {
+  background-color: #4a9ff5;
+  color: #ffffff;
+  grid-row: span 2;
+}
+
+.btn-equals:hover {
+  background-color: #6bb3ff;
+}
+
+/* Zero button spanning two columns */
+.btn-zero {
+  grid-column: span 2;
+}
